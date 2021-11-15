@@ -7,16 +7,26 @@
 </head>
 <body>
 <div id="app">
+    <button @click="showinfo()">Show info</button>
     <p>{{msg}}</p>
 </div>
 
 <script>
-    var app = new Vue({
+    var vm = new Vue({
     el: '#app',
     data: {
-    msg: 'Hello Vue.js --Chengnian!'
+    msg: 'Hello Vue.js --Chengnian!',
+    name: '定义的初始化数据'
+  },
+  methods: {
+  showinfo(){
+  this.msg ='触发单击事件'
+  }
   }
     })
+  console.log(vm.$data.name)
+  console.log(vm.name)
+
 
 
 </script>
